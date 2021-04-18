@@ -5,8 +5,8 @@ A stocks, forex and crypto investing portfolio manager.
 **CURRENTLY IN DEVELOPMENT**
 
 ## Screenshots
-![ss](screenshots/Screenshot&#32;at&#32;2021-04-18&#32;22-56-33.png)  
-![ss](screenshots/Screenshot&#32;at&#32;2021-04-18&#32;22-57-04.png)  
-![ss](screenshots/Screenshot&#32;at&#32;2021-04-18&#32;22-57-45.png)  
-![ss](screenshots/Screenshot&#32;at&#32;2021-04-18&#32;22-57-54.png)  
-![ss](screenshots/Screenshot&#32;at&#32;2021-04-18&#32;22-58-15.png)  
+![ss](screenshots/2021-04-18_22-56-33.png)  
+![ss](screenshots/2021-04-18_22-57-04.png)  
+![ss](screenshots/2021-04-18_22-57-45.png)  
+![ss](screenshots/2021-04-18_22-57-54.png)  
+![ss](screenshots/2021-04-18_22-58-15.png)  
