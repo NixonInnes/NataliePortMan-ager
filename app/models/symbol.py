@@ -10,4 +10,3 @@ class Symbol(StandardMixin, db.Model):
     is_crypto = db.Column(db.Boolean, default=False)
 
     assets = db.relationship("Asset", backref="symbol")
-

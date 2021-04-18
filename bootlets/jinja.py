@@ -44,8 +44,10 @@ class Something:
         return kwargs
 
     def __call__(self, *args, **kwargs):
-        return self.__class__(*args if args else *self.args,
-                              **{**self.kwargs, **kwargs})
+        return self.__class__(
+            *args if args else *self.args,
+            **{**self.kwargs, **kwargs}
+        )
 
     def __repr__(self) -> str:
         s = self.__class__.__qualname__ + '('

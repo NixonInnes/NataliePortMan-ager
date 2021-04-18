@@ -25,5 +25,5 @@ def info(symbol):
 
 @main.route("/_info", methods=["GET"])
 def _info():
-    symbol=request.args.get("tvwidgetsymbol", "AAPL")
+    symbol = request.args.get("tvwidgetsymbol", "AAPL")
     return render_template("info.html", symbol=symbol)

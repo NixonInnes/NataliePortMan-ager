@@ -11,4 +11,5 @@ def get_html_tag_map():
             map_[template.tag] = template
     return map_
 
+
 HTML_MAP = get_html_tag_map()

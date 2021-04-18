@@ -5,4 +5,4 @@ from . import crypto
 
 @crypto.route("/screener")
 def screener():
-	return render_template("crypto/screener.html")
+    return render_template("crypto/screener.html")

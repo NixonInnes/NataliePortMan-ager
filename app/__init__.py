@@ -44,10 +44,12 @@ def create_app():
     from app.blueprints.auth import auth as auth_blueprint
     from app.blueprints.crypto import crypto as crypto_blueprint
     from app.blueprints.forex import forex as forex_blueprint
+    from app.blueprints.portfolio import portfolio as portfolio_blueprint
     from app.blueprints.stocks import stocks as stocks_blueprint
 
     app.register_blueprint(auth_blueprint, url_prefix="/auth")
     app.register_blueprint(crypto_blueprint, url_prefix="/crypto")
+    app.register_blueprint(portfolio_blueprint, url_prefix="/portfolio")
     app.register_blueprint(forex_blueprint, url_prefix="/forex")
     app.register_blueprint(stocks_blueprint, url_prefix="/stocks")
 

@@ -33,8 +33,8 @@ with app.app_context():
 def is_hidden_field_filter(field):
     return isinstance(field, HiddenField)
 
-app.jinja_env.globals['bootstrap_is_hidden_field'] =\
-            is_hidden_field_filter
+
+app.jinja_env.globals["bootstrap_is_hidden_field"] = is_hidden_field_filter
 
 
 @app.shell_context_processor

@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-crypto = Blueprint("crypto", __name__)
+portfolio = Blueprint("portfolio", __name__)
 
 from . import views
