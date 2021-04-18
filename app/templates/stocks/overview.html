@@ -1,0 +1,128 @@
+{% extends "_base.html" %}
+
+
+{% block content %}
+<!-- Page Heading -->
+
+<!-- Content Row -->
+
+<style>
+  .market-widget {
+    height: 700px;
+  }
+</style>
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+      {
+      "symbols": [
+        {
+          "proName": "FOREXCOM:SPXUSD",
+          "title": "S&P 500"
+        },
+        {
+          "proName": "FOREXCOM:NSXUSD",
+          "title": "Nasdaq 100"
+        },
+        {
+          "proName": "BITSTAMP:BTCUSD",
+          "title": "BTC/USD"
+        },
+        {
+          "proName": "BITSTAMP:ETHUSD",
+          "title": "ETH/USD"
+        },
+        {
+          "description": "GBP/USD",
+          "proName": "OANDA:GBPUSD"
+        },
+        {
+          "description": "GBP/EUR",
+          "proName": "FX_IDC:GBPEUR"
+        },
+        {
+          "description": "FTSE 100",
+          "proName": "CURRENCYCOM:UK100"
+        }
+      ],
+      "showSymbolLogo": true,
+      "colorTheme": "light",
+      "isTransparent": false,
+      "displayMode": "adaptive",
+      "locale": "en"
+    }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+  </div>
+</div>
+
+<div class="row mb-2">
+  <div class="col-md-6">
+    <div class="market-widget">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+        {
+        "colorTheme": "light",
+        "dateRange": "3M",
+        "exchange": "US",
+        "showChart": true,
+        "locale": "en",
+        "width": "100%",
+        "height": "100%",
+        "largeChartUrl": "",
+        "isTransparent": false,
+        "showSymbolLogo": true,
+        "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+        "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+        "gridLineColor": "rgba(240, 243, 250, 1)",
+        "scaleFontColor": "rgba(120, 123, 134, 1)",
+        "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+        "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+        "symbolActiveColor": "rgba(33, 150, 243, 0.12)"
+      }
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="market-widget">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+        {
+        "colorTheme": "light",
+        "dateRange": "3M",
+        "exchange": "LSE",
+        "showChart": true,
+        "locale": "en",
+        "width": "100%",
+        "height": "100%",
+        "largeChartUrl": "{{ url_for('main._info', _external=True) }}",
+        "isTransparent": false,
+        "showSymbolLogo": true,
+        "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+        "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+        "gridLineColor": "rgba(240, 243, 250, 1)",
+        "scaleFontColor": "rgba(120, 123, 134, 1)",
+        "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+        "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+        "symbolActiveColor": "rgba(33, 150, 243, 0.12)"
+      }
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

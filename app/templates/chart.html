@@ -1,0 +1,47 @@
+{% extends "_base.html" %}
+
+
+{% block content %}
+<!-- Page Heading -->
+<h1>{{symbol}}</h1>
+
+<!-- Content Row -->
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_01b62"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/{{symbol}}/" rel="noopener" target="_blank"><span class="blue-text">Chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "autosize": true,
+  "symbol": "{{symbol}}",
+  "interval": "D",
+  "timezone": "Europe/Dublin",
+  "theme": "light",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "container_id": "tradingview_01b62"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+<!-- Page level plugins -->
+<script src="{{ url_for('static', filename='vendor/chart.js/Chart.min.js') }}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{{ url_for('static', filename='js/demo/chart-area-demo.js') }}"></script>
+<script src="{{ url_for('static', filename='js/demo/chart-pie-demo.js') }}"></script>
+{% endblock %}
+
+

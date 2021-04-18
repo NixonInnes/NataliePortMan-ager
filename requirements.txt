@@ -1,0 +1,5 @@
+Flask
+Flask-Bootstrap
+Flask-Migrate
+Flask-SQLAlchemy
+Flask-WTF

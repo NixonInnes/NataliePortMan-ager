@@ -1,0 +1,75 @@
+2021-04-18 00:25:18,026 - app - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/nixoninnes/Development/TradeInfo/app/blueprints/main/views.py", line 9, in index
+    return render_template('index.html')
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/home/nixoninnes/Development/TradeInfo/app/templates/index.html", line 1, in top-level template code
+    {% extends "_base.html" %}
+  File "/home/nixoninnes/Development/TradeInfo/app/templates/_base.html", line 1, in top-level template code
+    {% block head %}
+  File "/home/nixoninnes/Development/TradeInfo/app/templates/_base.html", line 18, in block "head"
+    {{ fontawesome_html() }}
+jinja2.exceptions.UndefinedError: 'fontawesome_html' is undefined
+2021-04-18 00:25:19,648 - app - ERROR - Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/werkzeug/routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1816, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/app.py", line 1744, in handle_http_exception
+    return handler(e)
+  File "/home/nixoninnes/Development/TradeInfo/app/blueprints/main/errors.py", line 21, in page_not_found
+    return render_template('errors/404.html'), 404
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/nixoninnes/.venvs/TradeInfo/lib/python3.8/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: errors/404.html
