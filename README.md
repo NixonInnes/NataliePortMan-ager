@@ -1,4 +1,5 @@
-# ![logo](app/static/logo.png) Natalie [PortMan(ager)]
+# ![logo](app/static/logo.png) 
+# Natalie [PortMan(ager)]
 A stocks, forex and crypto investing portfolio manager.
 
 **CURRENTLY IN DEVELOPMENT**
